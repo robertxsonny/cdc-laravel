@@ -1,0 +1,16 @@
+{
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": true,
+  "hostname": "172.19.16.156",
+  "port": "21",
+  "target": "cdc/laravel",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "p4655",
+  "password": "@m1tr41syk",
+  "watch": [],
+  "transport": "ftp"
+}

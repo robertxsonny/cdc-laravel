@@ -1,0 +1,16 @@
+{
+    "remotePath": "cdc/laravel",
+    "host": "172.19.16.176",
+    "username": "p4655",
+    "password": "@m1tr41syk",
+    "port": 21,
+    "protocol": "ftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git"
+    ]
+}
