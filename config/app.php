@@ -168,7 +168,7 @@ return [
         /*
          * Package Service Providers...
          */
-        //Orangehill\Iseed\IseedServiceProvider::class,
+        Orangehill\Iseed\IseedServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
         /*
          * Application Service Providers...
