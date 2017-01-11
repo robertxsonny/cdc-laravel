@@ -17,7 +17,15 @@ class ArtistsTableSeeder extends Seeder
         \DB::table('artists')->delete();
         
         \DB::table('artists')->insert(array (
-            0 => 
+            array (
+                'id' => 1,
+                'name' => 'Unknown',
+                'country' => 'Unknown',
+                'genre' => 'Unknown',
+                'created_at' => '2016-11-05 03:51:49',
+                'updated_at' => null,
+                'picture' => '/storage/artists/1.jpeg',
+            ),
             array (
                 'id' => 3,
                 'name' => 'OneRepublic',
@@ -27,7 +35,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-11-22 07:05:25',
                 'picture' => '/storage/artists/3.jpeg',
             ),
-            1 => 
             array (
                 'id' => 2,
                 'name' => 'The Chainsmokers',
@@ -37,7 +44,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-11-22 07:10:21',
                 'picture' => '/storage/artists/2.jpeg',
             ),
-            2 => 
             array (
                 'id' => 5,
                 'name' => 'Ariana Grande',
@@ -47,7 +53,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-11-23 07:10:06',
                 'picture' => '/storage/artists/5.jpeg',
             ),
-            3 => 
             array (
                 'id' => 7,
                 'name' => 'Raisa',
@@ -57,7 +62,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-11-24 06:05:44',
                 'picture' => '/storage/artists/7.jpeg',
             ),
-            4 => 
             array (
                 'id' => 8,
                 'name' => 'Isyana Sarasvati',
@@ -67,7 +71,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-12-01 05:41:41',
                 'picture' => '/storage/artists/8.jpeg',
             ),
-            5 => 
             array (
                 'id' => 11,
                 'name' => 'Maroon 5',
@@ -77,7 +80,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-12-07 07:21:23',
                 'picture' => '/storage/artists/11.jpeg',
             ),
-            6 => 
             array (
                 'id' => 12,
                 'name' => 'Monita Tahalea',
@@ -87,7 +89,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-12-08 07:59:32',
                 'picture' => '/storage/artists/12.jpeg',
             ),
-            7 => 
             array (
                 'id' => 10,
                 'name' => 'Zedd',
@@ -97,7 +98,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-12-08 10:34:15',
                 'picture' => '/storage/artists/10.jpeg',
             ),
-            8 => 
             array (
                 'id' => 13,
                 'name' => 'Imagine Dragons',
@@ -107,7 +107,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-12-08 10:36:54',
                 'picture' => '/storage/artists/13.jpeg',
             ),
-            9 => 
             array (
                 'id' => 16,
                 'name' => 'Maliq & d\'essentials',
@@ -117,7 +116,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-12-09 07:26:25',
                 'picture' => '/storage/artists/16.jpeg',
             ),
-            10 => 
             array (
                 'id' => 15,
                 'name' => 'Adele',
@@ -127,7 +125,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-12-09 07:26:46',
                 'picture' => '/storage/artists/15.jpeg',
             ),
-            11 => 
             array (
                 'id' => 14,
                 'name' => 'Taylor Swift',
@@ -137,7 +134,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-12-09 07:27:03',
                 'picture' => '/storage/artists/14.jpeg',
             ),
-            12 => 
             array (
                 'id' => 18,
                 'name' => 'Coldplay',
@@ -147,7 +143,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-12-14 08:18:21',
                 'picture' => '/storage/artists/18.jpeg',
             ),
-            13 => 
             array (
                 'id' => 19,
                 'name' => 'Calvin Harris',
@@ -157,7 +152,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-12-15 07:57:18',
                 'picture' => '/storage/artists/19.png',
             ),
-            14 => 
             array (
                 'id' => 9,
                 'name' => 'Michael Buble',
@@ -167,7 +161,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-12-15 08:26:53',
                 'picture' => '/storage/artists/9.jpeg',
             ),
-            15 => 
             array (
                 'id' => 20,
                 'name' => 'Dipha Barus',
@@ -177,7 +170,6 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2016-12-20 09:53:01',
                 'picture' => '/storage/artists/20.jpeg',
             ),
-            16 => 
             array (
                 'id' => 21,
                 'name' => 'DJ Snake',

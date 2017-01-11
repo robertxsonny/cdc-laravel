@@ -27,7 +27,7 @@ class ApiAuthController extends Controller
 
         if (Auth::attempt($login)) {
             $user = Auth::user();
-            $token = $user->createToken('Token Name')->accessToken;
+            $token = $user->createToken('User Login')->accessToken;
 
             $response = [
                 'success' => 'User is logged in.',

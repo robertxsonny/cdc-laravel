@@ -14,12 +14,8 @@ use Illuminate\Http\Response;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
-
-Route::group(['middleware' => ['auth:api']], function() {
-
+Route::group(['middleware' => ['auth:api']], function()
+{
   Route::resource('artist','Api\ArtistController', ['except' => [ 'create', 'edit' ]]);
   Route::resource('artist.picture','Api\ArtistPictureController', ['only' => [ 'store' ]]);
   Route::resource('artist.album','Api\ArtistAlbumController', ['only' => [ 'index', 'store' ]]);
@@ -34,10 +30,15 @@ Route::group(['middleware' => ['auth:api']], function() {
   Route::resource('playlist.picture','Api\PlaylistPictureController', ['only' => [ 'store' ]]);
   Route::resource('playlist.song','Api\PlaylistSongController', ['only' => [ 'index', 'store', 'destroy' ]]);
 
+  Route::get('/user', function (Request $request)
+  {
+    return $request->user();
+  });
+
   Route::post('/logout','Api\ApiAuthController@logout')->name('api.logout');
 });
 
-Route::group(['middleware' => ['guest']], function() {
+Route::group(['middleware' => ['guest:api']], function() {
   Route::post('/login','Api\ApiAuthController@login')->name('api.login');
   Route::post('/register','Api\ApiAuthController@register')->name('api.register');
 });
