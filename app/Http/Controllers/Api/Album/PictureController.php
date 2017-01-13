@@ -1,25 +1,26 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\Album;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Artist;
 
-class ArtistPictureController extends Controller
+// Models
+use App\Album;
+
+class PictureController extends Controller
 {
-
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store($artistid, Request $request)
+    public function store($albumId, Request $request)
     {
         //
-        $artist = Artist::findOrFail($artistid);
+        $album = Album::find($albumId);
         
         $this->validate($request, [
             'picture' => 'required|max:10000|mimes:jpg,jpeg,gif,png',
@@ -27,13 +28,10 @@ class ArtistPictureController extends Controller
         
         $extension = $request->picture->extension();
         
-        if (isset($artist->picture))
-            \Storage::delete(str_replace('/storage/', '', $artist->picture));
-        
-        $path = $request->file('picture')->storeAs('artists', $artistid.'.'.$extension);
+        $path = $request->file('picture')->storeAs('album', $albumId.'.'.$extension);
                 
-        $artist->picture = '/storage/'.$path;
-        $artist->save();
+        $album->picture = '/storage/'.$path;
+        $album->save();
                 
         return response()->json(['success' => 'Picture added!'], 200);
     }

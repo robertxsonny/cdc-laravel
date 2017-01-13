@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\User;
-use Validator;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
-class ApiAuthController extends Controller
+// Addon
+use Validator;
+
+// Models
+use App\User;
+
+class AuthController extends Controller
 {
 
     /**

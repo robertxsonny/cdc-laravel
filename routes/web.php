@@ -12,5 +12,5 @@
 */
 
 Route::get('/', function () {
-    return 'No interface, only API :)';
+	return 'No interface, only API :)';
 });

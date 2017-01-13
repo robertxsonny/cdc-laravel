@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\Playlist;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Album;
 
-class AlbumPictureController extends Controller
+// Models
+use App\Playlist;
+
+class PictureController extends Controller
 {
 
     /**
@@ -16,22 +18,22 @@ class AlbumPictureController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store($albumId, Request $request)
+    public function store($playlistId, Request $request)
     {
         //
-        $album = Album::findOrFail($albumId);
-        
+        $playlist = Playlist::findOrFail($playlistId);
+
         $this->validate($request, [
             'picture' => 'required|max:10000|mimes:jpg,jpeg,gif,png',
         ]);
-        
+
         $extension = $request->picture->extension();
-        
-        $path = $request->file('picture')->storeAs('album', $albumId.'.'.$extension);
-                
-        $album->picture = '/storage/'.$path;
-        $album->save();
-                
+
+        $path = $request->file('picture')->storeAs('playlist', $playlistId.'.'.$extension);
+
+        $playlist->picture = '/storage/'.$path;
+        $playlist->save();
+
         return response()->json(['success' => 'Picture added!'], 200);
     }
 

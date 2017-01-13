@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\Playlist;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+
+// Models
 use App\Song;
 
-class PlaylistSongController extends Controller
+class SongController extends Controller
 {
     /**
      * Display a listing of the resource.

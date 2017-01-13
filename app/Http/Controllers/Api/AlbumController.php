@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+
+// Models
 use App\Album;
 use App\Artist;
 
@@ -95,9 +97,9 @@ class AlbumController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-          'name'=> 'required',
-          'year' => 'required|integer|min:1970',
-          'artist_id' => 'required|integer'
+            'name'=> 'required',
+            'year' => 'required|integer|min:1970',
+            'artist_id' => 'required|integer'
         ]);
         //
         $artist = Artist::findOrFail($request->artist_id);
