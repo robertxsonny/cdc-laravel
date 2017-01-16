@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\ApiController;
 use Illuminate\Support\Facades\Auth;
 
 // Addon
@@ -13,7 +13,7 @@ use Validator;
 // Models
 use App\User;
 
-class AuthController extends Controller
+class AuthController extends ApiController
 {
 
     /**
@@ -40,6 +40,8 @@ class AuthController extends Controller
             ];
 
             return response()->json($response);
+        } else {
+            return $this->sendError('Email or Password is not match');
         }
 
     }

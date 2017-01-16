@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
 // Models
 use App\Artist;
 
-class ArtistController extends Controller
+class ArtistController extends ApiController
 {
   /**
   * Display a listing of the resource.

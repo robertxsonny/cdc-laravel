@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Api\Song;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
 // Models
 use App\Song;
 
-class FileController extends Controller
+class FileController extends ApiController
 {
 
     /**

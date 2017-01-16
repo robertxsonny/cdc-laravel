@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
@@ -10,7 +10,7 @@ use App\Http\Requests;
 use App\Playlist;
 use App\Album;
 
-class PlaylistController extends Controller
+class PlaylistController extends ApiController
 {
     /**
      * Display a listing of the resource.

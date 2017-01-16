@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Api\Album;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
 // Models
 use App\Album;
 
-class PictureController extends Controller
+class PictureController extends ApiController
 {
     /**
      * Store a newly created resource in storage.

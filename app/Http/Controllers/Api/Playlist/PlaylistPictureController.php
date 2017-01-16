@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Api\Playlist;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
 // Models
 use App\Playlist;
 
-class PictureController extends Controller
+class PictureController extends ApiController
 {
 
     /**
