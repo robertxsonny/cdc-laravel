@@ -118,7 +118,7 @@ class ArtistController extends ApiController
 
     $artist->save();
 
-    return response()->json(['success' => 'Artist edited!'], 200);
+    return $this->sendMessage('Artist edited!');
   }
 
   /**
@@ -133,7 +133,7 @@ class ArtistController extends ApiController
     $artist = Artist::findOrFail($id);
     $artist->delete();
 
-    return response()->json(['success' => 'Artist deleted!'], 200);
+    return $this->sendMessage('Artist deleted!');
   }
 
 

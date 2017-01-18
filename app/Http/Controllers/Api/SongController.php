@@ -27,16 +27,6 @@ class SongController extends ApiController
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -83,17 +73,6 @@ class SongController extends ApiController
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -110,7 +89,7 @@ class SongController extends ApiController
         // $song->artist_id = Album::findOrFail($request->album_id)->artist_id;
         $song->save();
                 
-        return response()->json(['success' => 'Song edited!'], 200);
+        return $this->sendMessage('Song edited!');
     }
 
     /**
@@ -125,6 +104,6 @@ class SongController extends ApiController
         $song = Song::findOrFail($id);
         $song->delete();
         
-        return response()->json(['success' => 'Song deleted!'], 200);
+        return $this->sendMessage('Song deleted!');
     }
 }

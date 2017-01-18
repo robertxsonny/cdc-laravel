@@ -34,7 +34,7 @@ class PictureController extends ApiController
         $playlist->picture = '/storage/'.$path;
         $playlist->save();
 
-        return response()->json(['success' => 'Picture added!'], 200);
+        return $this->sendMessage('Picture added!');
     }
 
 }

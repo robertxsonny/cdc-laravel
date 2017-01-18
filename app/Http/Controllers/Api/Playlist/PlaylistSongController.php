@@ -40,7 +40,7 @@ class SongController extends ApiController
         $playlist->songs()->attach($request->id);
         $playlist->save();
 
-        return response()->json(['success' => 'Song added!'], 200);
+        return $this->sendMessage('Song added!');
     }
 
     /**
@@ -56,7 +56,7 @@ class SongController extends ApiController
       $playlist->songs()->detach($songId);
       $playlist->save();
 
-      return response()->json(['success' => 'Song deleted!'], 200);
+      return $this->sendMessage('Song deleted!');
     }
 
 

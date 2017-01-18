@@ -27,16 +27,6 @@ class PlaylistController extends ApiController
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -69,17 +59,6 @@ class PlaylistController extends ApiController
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -95,7 +74,7 @@ class PlaylistController extends ApiController
         $playlist->description = $request->description;
         $playlist->save();
 
-        return response()->json(['success' => 'Playlist edited!'], 200);
+        return $this->sendMessage('Playlist edited!');
     }
 
     /**
@@ -110,6 +89,6 @@ class PlaylistController extends ApiController
         $playlist = Playlist::findOrFail($id);
         $playlist->delete();
 
-        return response()->json(['success' => 'Playlist deleted!'], 200);
+        return $this->sendMessage('Playlist deleted!');
     }
 }

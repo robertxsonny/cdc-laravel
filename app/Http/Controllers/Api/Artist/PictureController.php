@@ -37,7 +37,7 @@ class PictureController extends ApiController
         $artist->picture = '/storage/'.$path;
         $artist->save();
                 
-        return response()->json(['success' => 'Picture added!'], 200);
+        return $this->sendMessage('Picture added!');
     }
 
 }
